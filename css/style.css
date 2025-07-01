@@ -69,14 +69,15 @@ img {
 }
 
 /* --- 2. Animations & Keyframes --- */
-@keyframes kenBurns {
+/* Ken Burns animation is no longer needed for static background */
+/* @keyframes kenBurns {
     0% {
         transform: scale(1.05) rotate(0.5deg);
     }
     100% {
         transform: scale(1) rotate(0deg);
     }
-}
+} */
 
 /* --- 3. Scroll-Reveal Animations (Controlled by JS) --- */
 .reveal-on-scroll {
@@ -397,19 +398,26 @@ img {
     justify-content: center;
     text-align: center;
     color: var(--color-light);
+    /* Set static background image */
+    background-image: url('/images/background/bg1.jpg'); /* Using the first image from your list */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-#bg-container {
+/* #bg-container is removed, so its styles are no longer needed */
+/* #bg-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
+} */
 
-#bg-container > div {
+/* #bg-container > div is removed, so its styles are no longer needed */
+/* #bg-container > div {
     animation: kenBurns 20s ease-in-out infinite alternate;
-}
+} */
 
 .hero-overlay {
     position: absolute;
