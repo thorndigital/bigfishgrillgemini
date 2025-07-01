@@ -82,7 +82,162 @@ img {
     position: relative;
     margin-left: 30px; /* Spacing between main menu items */
 }
+/* --- Jobs Page Specific Styles --- */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
 
+.benefit-card {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.benefit-card i {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: var(--color-primary-teal);
+}
+
+.benefit-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.job-listings {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on mobile, potentially 2 columns on desktop */
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.job-card {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.job-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    color: var(--color-primary-teal);
+    margin-bottom: 10px;
+}
+
+.job-meta {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.job-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Pushes button to the bottom */
+}
+
+.job-card .btn-cta {
+    align-self: flex-start; /* Aligns button to the left */
+    margin-top: auto; /* Pushes button to the bottom if description length varies */
+}
+
+.no-jobs-message {
+    background-color: var(--color-gray);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #444;
+}
+
+.no-jobs-message p {
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+.application-info-block {
+    background-color: var(--color-gray);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.application-info-block p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.apply-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.apply-option {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-primary-teal); /* Highlight these options */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.apply-option i {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: var(--color-accent-gold); /* Accent color for icons */
+}
+
+.apply-option h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+}
+
+.apply-option p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .job-listings {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+    }
+}
 .nav-menu a {
     display: block;
     padding: 10px 0;
@@ -827,5 +982,153 @@ img {
 @media (max-width: 767px) {
     .info-grid {
         grid-template-columns: 1fr; /* Stack vertically on mobile */
+    }
+}
+/* --- Contact Page Specific Styles --- */
+.contact-info-section {
+    padding-top: 60px; /* Extra padding to account for sticky header when jumping to anchors */
+    margin-top: -60px; /* Counteract the padding-top so content aligns properly */
+}
+
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.contact-block {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-block i {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.contact-block h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    color: var(--color-dark);
+    margin-bottom: 15px;
+}
+
+.contact-block p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 5px; /* Tighter spacing for contact details */
+}
+
+.contact-block .text-link {
+    color: var(--color-primary-teal);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.contact-block .text-link:hover {
+    color: var(--color-accent-gold);
+}
+
+.map-container {
+    margin-top: 60px;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures map corners are rounded */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.map-container iframe {
+    display: block; /* Removes extra space below iframe */
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: var(--color-gray);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 700px; /* Max width for the form */
+    margin: 50px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left; /* Align labels and inputs */
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-dark);
+    font-size: 1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: var(--color-light);
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button[type="submit"] {
+    display: block;
+    width: auto; /* Button width adjusts to content */
+    margin: 0 auto; /* Center the button */
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-accent-gold);
+    color: var(--color-light);
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #C19200;
+    transform: translateY(-3px);
+}
+
+.form-note {
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .contact-details-grid {
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
+    }
+    .contact-form {
+        padding: 30px;
     }
 }
