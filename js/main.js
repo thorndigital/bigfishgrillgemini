@@ -90,11 +90,33 @@ jQuery(document).ready(function($) {
     // Basic example if you want to delay map loading or manage it via JS
     // var mapLoaded = false;
     // $(window).on('scroll', function() {
-    //     if (!mapLoaded && $(window).scrollTop() + $(window).height() > $('#map-container').offset().top - 200) {
-    //         // Load map API or embed iframe here
-    //         // Example: $('#map-container').html('<iframe src="YOUR_Maps_EMBED_URL" ...></iframe>');
-    //         mapLoaded = true;
-    //     }
+    //      if (!mapLoaded && $(window).scrollTop() + $(window).height() > $('#map-container').offset().top - 200) {
+    //          // Load map API or embed iframe here
+    //          // Example: $('#map-container').html('<iframe src="YOUR_Maps_EMBED_URL" ...></iframe>');
+    //          mapLoaded = true;
+    //      }
     // });
 
-});
+    // --- BACKGROUND CYCLING INITIALIZATION (ADD THIS BLOCK HERE) ---
+    // This assumes background.cycle.js is loaded BEFORE main.js in your HTML
+    if ($.fn.backgroundCycle) { // Check if the plugin exists
+        $("#bg-container").backgroundCycle({
+            imageUrls: [
+                '/images/global/background/bg1.jpg',
+                '/images/global/background/bg2.jpg',
+                '/images/global/background/bg3.jpg',
+                '/images/global/background/bg5.jpg',
+                '/images/global/background/bg6.jpg',
+                '/images/global/background/bg7.jpg',
+                '/images/global/background/bg8.jpg'
+            ],
+            fadeSpeed: 1000, /* Slower fade for elegance */
+            duration: 6000, /* Longer display duration per image */
+            backgroundSize: 'cover' /* Use 'cover' directly from JS plugin */
+        });
+    } else {
+        console.warn("background.cycle.js plugin not found. Background cycling will not work.");
+    }
+    // --- END BACKGROUND CYCLING INITIALIZATION ---
+
+}); // This is the very last closing bracket for jQuery(document).ready()
