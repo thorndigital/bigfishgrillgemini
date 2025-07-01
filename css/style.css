@@ -1695,3 +1695,67 @@ img {
         padding: 20px;
     }
 }
+/* Styles for the 3-column grid of specialty items */
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax as needed */
+    gap: 30px; /* Space between grid items */
+    margin-top: 40px;
+}
+
+/* Styles for individual specialty items */
+.specialty-item {
+    background-color: var(--color-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow: hidden; /* Important for containing the image within rounded corners */
+    text-align: center;
+    padding-bottom: 20px; /* Padding below text content */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack image, then text */
+}
+
+/* Styles for the images within specialty items */
+.specialty-item img.content-image {
+    width: 100%; /* Make image take full width of its container */
+    height: 200px; /* **Fixed height for all images** */
+    object-fit: cover; /* **Crucial: Crops image to fit, maintains aspect ratio** */
+    object-position: center; /* Center the image within its bounds */
+    border-top-left-radius: 10px; /* Match container border radius */
+    border-top-right-radius: 10px; /* Match container border radius */
+    margin-bottom: 15px; /* Space between image and heading */
+}
+
+/* Text content within specialty items */
+.specialty-item h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6em;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+    padding: 0 15px; /* Add horizontal padding for text */
+}
+
+.specialty-item p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+    padding: 0 15px; /* Add horizontal padding for text */
+    flex-grow: 1; /* Allows paragraph to take up available space, pushing CTA down */
+}
+
+/* Call to action button block */
+.cta-block {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .grid-3-col {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+        gap: 20px;
+    }
+    .specialty-item img.content-image {
+        height: 220px; /* Adjust height for smaller screens if needed */
+    }
+}
