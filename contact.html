@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Big Fish Grill Woodinville</title>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <meta name="description" content="Contact Big Fish Grill Woodinville for reservations, feedback, or general inquiries. Find our location and hours.">
+    <meta name="description" content="Contact Big Fish Grill Woodinville for reservations, feedback, or general inquiries. Find our location, hours, and contact details.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,46 +118,38 @@
 
     <main id="main" class="site-main">
         <section class="page-hero">
-            <div class="page-hero-content">
+            <div class="page-hero-content reveal-on-scroll">
                 <h1>Get In Touch</h1>
-                <p>We're here to answer your questions and hear your feedback.</p>
-                <div class="menu-nav-links">
-                    <a href="#woodinville" class="btn-hero btn-secondary btn-small">Woodinville Location</a>
-                    <a href="#feedback" class="btn-hero btn-secondary btn-small">Send Us Feedback</a>
-                </div>
+                <p>We're here to answer your questions and hear your feedback. We look forward to connecting with you!</p>
             </div>
         </section>
 
-        <section id="woodinville" class="content-section contact-info-section">
+        <section id="woodinville" class="content-section menu-section-anchor">
             <div class="container">
-                <h2 class="section-title">Big Fish Grill Woodinville</h2>
+                <h2 class="section-title reveal-on-scroll">Big Fish Grill Woodinville</h2>
                 <div class="contact-details-grid">
-                    <div class="contact-block">
-                        <i class="fas fa-map-marker-alt" style="color: var(--color-accent-gold);"></i>
+                    <div class="info-block reveal-on-scroll" data-reveal-delay="100">
+                        <i class="fas fa-map-marker-alt"></i>
                         <h3>Address</h3>
-                        <p>13706 NE 175th St</p>
-                        <p>Woodinville, WA 98072</p>
-                        <p><a href="https://www.google.com/maps/search/?api=1&query=Big+Fish+Grill+Woodinville+13706+NE+175th+St+Woodinville+WA+98072" target="_blank" class="text-link">Get Directions</a></p>
+                        <p>13706 NE 175th St<br>Woodinville, WA 98072</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Big+Fish+Grill+Woodinville+13706+NE+175th+St+Woodinville+WA+98072" target="_blank" class="btn-cta btn-secondary btn-small">Get Directions</a>
                     </div>
-                    <div class="contact-block">
-                        <i class="fas fa-phone-alt" style="color: var(--color-accent-gold);"></i>
+                    <div class="info-block reveal-on-scroll" data-reveal-delay="200">
+                        <i class="fas fa-phone-alt"></i>
                         <h3>Phone</h3>
-                        <p>General Inquiries:</p>
-                        <p><a href="tel:+14254873474" class="text-link">(425) 487-3474</a></p>
-                        <p style="margin-top: 10px;">For Reservations:</p>
-                        <p><a href="/reservations.html" class="text-link">Book Online</a></p>
+                        <p>For reservations, please <a href="/reservations.html" class="text-link">book online</a>. For other inquiries, call us at:</p>
+                        <p><a href="tel:+14254873474" class="phone-link">(425) 487-3474</a></p>
                     </div>
-                    <div class="contact-block">
-                        <i class="fas fa-clock" style="color: var(--color-accent-gold);"></i>
+                    <div class="info-block reveal-on-scroll" data-reveal-delay="300">
+                        <i class="fas fa-clock"></i>
                         <h3>Hours</h3>
                         <p>Mon - Thu: 11:30 AM - 9:00 PM</p>
                         <p>Fri - Sat: 11:30 AM - 10:00 PM</p>
                         <p>Sun: 11:30 AM - 9:00 PM</p>
-                        <p style="margin-top: 10px;"><a href="/specials.html" class="text-link">See Holiday Hours & Specials</a></p>
                     </div>
                 </div>
 
-                <div class="map-container">
+                <div class="map-container reveal-on-scroll">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2678.9669528615366!2d-122.1009187!3d47.7656917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900ab1c5b8d003%3A0x6b7b6b7b6b7b6b7b!2sBig%20Fish%20Grill!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                         width="100%"
@@ -172,29 +164,31 @@
             </div>
         </section>
 
-        <section id="feedback" class="content-section feedback-section">
+        <section id="feedback" class="content-section bg-light-gray menu-section-anchor">
             <div class="container">
-                <h2 class="section-title">Send Us Your Feedback</h2>
-                <p class="section-description">
-                    We value your thoughts! Please use the form below for general inquiries, feedback on your dining experience, or catering requests.
-                    For **reservations**, please use our <a href="/reservations.html">Reservations Page</a>.
+                <h2 class="section-title reveal-on-scroll">Send Us a Message</h2>
+                <p class="section-description reveal-on-scroll">
+                    We value your thoughts! Use this form for general inquiries, feedback on your dining experience, or private party requests. For reservations, please use our <a href="/reservations.html" class="text-link">Reservations Page</a>.
                 </p>
 
-                <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" required>
+                <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST" class="contact-form reveal-on-scroll">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject:</label>
-                        <select id="subject" name="subject">
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Please select a subject...</option>
                             <option value="general">General Inquiry</option>
                             <option value="feedback">Dining Feedback</option>
-                            <option value="catering">Catering Inquiry</option>
+                            <option value="catering">Private Party Inquiry</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -202,14 +196,10 @@
                         <label for="message">Your Message:</label>
                         <textarea id="message" name="message" rows="7" required></textarea>
                     </div>
-                    <button type="submit" class="btn-hero">Send Message</button>
+                    <div class="text-center">
+                       <button type="submit" class="btn-hero">Send Message</button>
+                    </div>
                 </form>
-                <p class="form-note">
-                    *Please note: This form is for inquiries and feedback only. For **reservations**, please use our <a href="/reservations.html">Reservations Page</a> or call us.
-                </p>
-                <p class="form-note">
-                    *This form currently does not process submissions directly. You'll need to set up a form backend (e.g., Formspree.io, Netlify Forms, or your own server-side script) for messages to be sent.
-                </p>
             </div>
         </section>
     </main>
@@ -225,7 +215,6 @@
             </div>
             <div class="footer-section hours">
                 <h3>Hours</h3>
-                <p>Lunch & Dinner Daily:</p>
                 <p>Mon - Thu: 11:30 AM - 9:00 PM</p>
                 <p>Fri - Sat: 11:30 AM - 10:00 PM</p>
                 <p>Sun: 11:30 AM - 9:00 PM</p>
