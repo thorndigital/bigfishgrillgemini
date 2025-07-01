@@ -1132,3 +1132,28 @@ img {
         padding: 30px;
     }
 }
+/* --- Legal Pages (Privacy Policy, Terms of Service) Specific Styles --- */
+.legal-page p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.legal-page ul {
+    list-style: disc; /* Use bullets for lists */
+    margin-left: 25px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.legal-page ul li {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.legal-page h2 {
+    margin-top: 40px; /* Add space above section titles within legal pages */
+    margin-bottom: 25px;
+}
