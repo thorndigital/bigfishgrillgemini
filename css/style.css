@@ -117,9 +117,14 @@ img {
 }
 
 /* Desktop Navigation */
+.main-navigation {
+    flex-grow: 1; /* Allow navigation to grow and push elements */
+}
+
 .main-navigation .nav-menu {
     list-style: none;
     display: flex;
+    justify-content: center; /* Center the navigation items */
 }
 
 .main-navigation .menu-item {
