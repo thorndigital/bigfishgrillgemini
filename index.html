@@ -7,35 +7,96 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="description" content="Big Fish Grill Woodinville: Fresh seafood and Northwest flavors in a casual, inviting atmosphere. Lunch & dinner daily, happy hour specials, and more.">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header class="site-header" role="banner">
-    <div class="header-container">
-        <div class="header-logo">
-            <a href="/">
-                <img src="/images/global/logo.png" alt="Big Fish Grill Logo" />
-            </a>
-        </div>
+        <div class="header-container container">
+            <div class="header-logo">
+                <a href="/">
+                    <img src="/images/global/logo.png" alt="Big Fish Grill Logo" />
+                </a>
+            </div>
 
-        <nav class="main-navigation" role="navigation">
-            <ul class="nav-menu">
+            <!-- Desktop Navigation -->
+            <nav class="main-navigation" role="navigation">
+                <ul class="nav-menu">
+                    <li class="menu-item"><a href="/">HOME</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="/about.html">ABOUT US</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="/about.html">Our Story</a></li>
+                            <li class="menu-item"><a href="/jobs.html">Jobs</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="/menu.html">MENU</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="/menu.html#woodinville">Woodinville Menu</a></li>
+                            <li class="menu-item"><a href="/menu.html#lunch-features">Lunch Features</a></li>
+                            <li class="menu-item"><a href="/menu.html#dinner-features">Dinner Features</a></li>
+                            <li class="menu-item"><a href="/menu.html#kids">Kid’s Menu</a></li>
+                            <li class="menu-item"><a href="/menu.html#happy-hour">Happy Hour Menu</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">DINE</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="/reservations.html">Reservations</a></li>
+                            <li class="menu-item"><a href="/specials.html">Specials</a></li>
+                            <li class="menu-item"><a target="_blank" href="https://onelink.quickgifts.com/merchant/big-fish-grill/">Gift Cards</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="/contact.html">CONTACT</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="/contact.html#woodinville">Woodinville Location</a></li>
+                            <li class="menu-item"><a href="/contact.html#feedback">Feedback</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header Call-to-Action Buttons -->
+            <div class="header-cta-buttons">
+                <a href="https://www.doordash.com/store/big-fish-grill-woodinville-27472/en-US" target="_blank" class="btn-cta">Order Online</a>
+                <a href="/reservations.html" class="btn-cta">Reservations</a>
+            </div>
+
+            <!-- Mobile Menu Toggle (Hamburger) -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-navigation">
+             <ul class="nav-menu">
                 <li class="menu-item"><a href="/">HOME</a></li>
                 <li class="menu-item menu-item-has-children">
-                    <a href="/about.html">ABOUT US</a>
+                    <a href="/about.html">ABOUT US <i class="fas fa-caret-down"></i></a>
                     <ul class="sub-menu">
                         <li class="menu-item"><a href="/about.html">Our Story</a></li>
                         <li class="menu-item"><a href="/jobs.html">Jobs</a></li>
                     </ul>
                 </li>
                 <li class="menu-item menu-item-has-children">
-                    <a href="/menu.html">MENU</a>
+                    <a href="/menu.html">MENU <i class="fas fa-caret-down"></i></a>
                     <ul class="sub-menu">
                         <li class="menu-item"><a href="/menu.html#woodinville">Woodinville Menu</a></li>
                         <li class="menu-item"><a href="/menu.html#lunch-features">Lunch Features</a></li>
@@ -45,7 +106,7 @@
                     </ul>
                 </li>
                 <li class="menu-item menu-item-has-children">
-                    <a href="#">DINE</a>
+                    <a href="#">DINE <i class="fas fa-caret-down"></i></a>
                     <ul class="sub-menu">
                         <li class="menu-item"><a href="/reservations.html">Reservations</a></li>
                         <li class="menu-item"><a href="/specials.html">Specials</a></li>
@@ -53,69 +114,20 @@
                     </ul>
                 </li>
                 <li class="menu-item menu-item-has-children">
-                    <a href="/contact.html">CONTACT</a>
+                    <a href="/contact.html">CONTACT <i class="fas fa-caret-down"></i></a>
                     <ul class="sub-menu">
                         <li class="menu-item"><a href="/contact.html#woodinville">Woodinville Location</a></li>
                         <li class="menu-item"><a href="/contact.html#feedback">Feedback</a></li>
                     </ul>
                 </li>
+                <li class="menu-item"><a target="_blank" href="https://www.doordash.com/store/big-fish-grill-woodinville-27472/en-US">ORDER ONLINE</a></li>
+                <li class="menu-item"><a href="/reservations.html">RESERVATIONS</a></li>
             </ul>
         </nav>
-
-        <div class="header-cta-buttons">
-            <a href="https://www.doordash.com/store/big-fish-grill-woodinville-27472/en-US" target="_blank" class="btn-cta">Order Online</a>
-            <a href="/reservations.html" class="btn-cta">Reservations</a>
-        </div>
-
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
     </div>
-</header>
 
-<div class="mobile-nav-overlay">
-    <button class="mobile-nav-close" aria-label="Close menu">
-        <i class="fas fa-times"></i>
-    </button>
-    <ul class="nav-menu">
-        <li class="menu-item"><a href="/">HOME</a></li>
-        <li class="menu-item menu-item-has-children">
-            <a href="/about.html">ABOUT US <i class="fas fa-caret-down"></i></a>
-            <ul class="sub-menu">
-                <li class="menu-item"><a href="/about.html">Our Story</a></li>
-                <li class="menu-item"><a href="/jobs.html">Jobs</a></li>
-            </ul>
-        </li>
-        <li class="menu-item menu-item-has-children">
-            <a href="/menu.html">MENU <i class="fas fa-caret-down"></i></a>
-            <ul class="sub-menu">
-                <li class="menu-item"><a href="/menu.html#woodinville">Woodinville Menu</a></li>
-                <li class="menu-item"><a href="/menu.html#lunch-features">Lunch Features</a></li>
-                <li class="menu-item"><a href="/menu.html#dinner-features">Dinner Features</a></li>
-                <li class="menu-item"><a href="/menu.html#kids">Kid’s Menu</a></li>
-                <li class="menu-item"><a href="/menu.html#happy-hour">Happy Hour Menu</a></li>
-            </ul>
-        </li>
-        <li class="menu-item menu-item-has-children">
-            <a href="#">DINE <i class="fas fa-caret-down"></i></a>
-            <ul class="sub-menu">
-                <li class="menu-item"><a href="/reservations.html">Reservations</a></li>
-                <li class="menu-item"><a href="/specials.html">Specials</a></li>
-                <li class="menu-item"><a target="_blank" href="https://onelink.quickgifts.com/merchant/big-fish-grill/">Gift Cards</a></li>
-            </ul>
-        </li>
-        <li class="menu-item menu-item-has-children">
-            <a href="/contact.html">CONTACT <i class="fas fa-caret-down"></i></a>
-            <ul class="sub-menu">
-                <li class="menu-item"><a href="/contact.html#woodinville">Woodinville Location</a></li>
-                <li class="menu-item"><a href="/contact.html#feedback">Feedback</a></li>
-            </ul>
-        </li>
-        <li class="menu-item"><a target="_blank" href="https://www.doordash.com/store/big-fish-grill-woodinville-27472/en-US">ORDER ONLINE</a></li>
-        <li class="menu-item"><a href="/reservations.html">RESERVATIONS</a></li>
-    </ul>
-</div>
     <main id="main" class="site-main">
+        <!-- Hero Section with Background Image Cycler -->
         <section class="hero-section">
             <div id="bg-container"></div>
             <div class="hero-overlay"></div>
@@ -129,6 +141,7 @@
             </div>
         </section>
 
+        <!-- Guest Message Section -->
         <section class="content-section bg-light-gray">
             <div class="container text-center">
                 <div class="reveal-on-scroll">
@@ -146,6 +159,7 @@
             </div>
         </section>
 
+        <!-- Specialties Section -->
         <section class="content-section">
             <div class="container">
                 <h2 class="section-title reveal-on-scroll">Our Specialties</h2>
@@ -179,34 +193,45 @@
                     </div>
                 </div>
                 <div class="cta-block reveal-on-scroll">
-                    <a href="/menu.html" class="btn-hero btn-secondary">Explore Our Full Menu</a>
+                    <a href="/menu.html" class="btn-hero">Explore Our Full Menu</a>
                 </div>
             </div>
         </section>
 
+        <!-- Visit Us Section -->
         <section class="content-section bg-dark-texture">
-            <div class="container text-light">
+            <div class="container">
                 <h2 class="section-title reveal-on-scroll">Visit Us in Woodinville</h2>
-                <p class="text-center lead-text reveal-on-scroll">We're open daily for lunch and dinner. Find us in the heart of Woodinville!</p>
-                <div class="location-info-grid">
-                    <div class="info-block reveal-on-scroll" data-reveal-delay="100">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Address</h3>
-                        <p>13706 NE 175th St<br>Woodinville, WA 98072</p>
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=13706+NE+175th+St,+Woodinville,+WA+98072" target="_blank" class="btn-cta btn-secondary">Get Directions</a>
+                <p class="lead-text reveal-on-scroll">We're open daily for lunch and dinner. Find us in the heart of Woodinville!</p>
+                <!-- UPDATED: Changed class to grid-3-col for responsive layout -->
+                <div class="grid-3-col">
+                    <!-- UPDATED: Changed class to card for new styling -->
+                    <div class="card text-center reveal-on-scroll" data-reveal-delay="100">
+                        <div class="card-content">
+                            <i class="fas fa-map-marker-alt card-icon"></i>
+                            <h3>Address</h3>
+                            <p>13706 NE 175th St<br>Woodinville, WA 98072</p>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=13706+NE+175th+St,+Woodinville,+WA+98072" target="_blank" class="btn-cta">Get Directions</a>
+                        </div>
                     </div>
-                    <div class="info-block reveal-on-scroll" data-reveal-delay="200">
-                        <i class="fas fa-clock"></i>
-                        <h3>Hours</h3>
-                        <p>Mon - Thu: 11:30 AM - 9:00 PM</p>
-                        <p>Fri - Sat: 11:30 AM - 10:00 PM</p>
-                        <p>Sun: 11:30 AM - 9:00 PM</p>
+                     <!-- UPDATED: Changed class to card for new styling -->
+                    <div class="card text-center reveal-on-scroll" data-reveal-delay="200">
+                        <div class="card-content">
+                            <i class="fas fa-clock card-icon"></i>
+                            <h3>Hours</h3>
+                            <p>Mon - Thu: 11:30 AM - 9:00 PM</p>
+                            <p>Fri - Sat: 11:30 AM - 10:00 PM</p>
+                            <p>Sun: 11:30 AM - 9:00 PM</p>
+                        </div>
                     </div>
-                    <div class="info-block reveal-on-scroll" data-reveal-delay="300">
-                        <i class="fas fa-phone-alt"></i>
-                        <h3>Call Us</h3>
-                        <p>Have a question or need to book a large party? Give us a call!</p>
-                        <p><a href="tel:+14254873474" class="phone-link">(425) 487-3474</a></p>
+                     <!-- UPDATED: Changed class to card for new styling -->
+                    <div class="card text-center reveal-on-scroll" data-reveal-delay="300">
+                         <div class="card-content">
+                            <i class="fas fa-phone-alt card-icon"></i>
+                            <h3>Call Us</h3>
+                            <p>Have a question or need to book for a large party? Give us a call!</p>
+                            <p><a href="tel:+14254873474" class="phone-link">(425) 487-3474</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,8 +239,9 @@
 
     </main>
 
+    <!-- Footer Section -->
     <footer class="site-footer">
-        <div class="footer-container">
+        <div class="footer-container container">
             <div class="footer-section contact-info">
                 <h3>Visit Us</h3>
                 <p>13706 NE 175th St</p>
@@ -250,7 +276,7 @@
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- JavaScript Files -->
     <script src="/js/background.cycle.js"></script>
     <script src="/js/main.js"></script>
 </body>
