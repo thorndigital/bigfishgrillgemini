@@ -102,13 +102,13 @@ jQuery(document).ready(function($) {
     if ($.fn.backgroundCycle) { // Check if the plugin exists
         $("#bg-container").backgroundCycle({
             imageUrls: [
-                '/images/global/background/bg1.jpg',
-                '/images/global/background/bg2.jpg',
-                '/images/global/background/bg3.jpg',
-                '/images/global/background/bg5.jpg',
-                '/images/global/background/bg6.jpg',
-                '/images/global/background/bg7.jpg',
-                '/images/global/background/bg8.jpg'
+                '/images/background/bg1.jpg',
+                '/images/background/bg2.jpg',
+                '/images/background/bg3.jpg',
+                '/images/background/bg5.jpg',
+                '/images/background/bg6.jpg',
+                '/images/background/bg7.jpg',
+                '/images/background/bg8.jpg'
             ],
             fadeSpeed: 1000, /* Slower fade for elegance */
             duration: 6000, /* Longer display duration per image */
