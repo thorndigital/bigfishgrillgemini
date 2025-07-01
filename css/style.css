@@ -569,3 +569,192 @@ img {
         justify-content: center;
     }
 }
+/* --- Menu Page Specific Styles --- */
+.menu-nav-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-small {
+    padding: 10px 20px; /* Smaller padding for menu navigation buttons */
+    font-size: 0.9em;
+}
+
+.menu-section {
+    padding-top: 60px; /* Extra padding to account for sticky header when jumping to anchors */
+    margin-top: -60px; /* Counteract the padding-top so content aligns properly */
+    /* For the very first section, adjust margin-top if needed, or remove this trick for that section */
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #555;
+}
+
+.menu-category {
+    margin-bottom: 60px;
+    background-color: var(--color-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.menu-category h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2em;
+    color: var(--color-dark);
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-primary-teal);
+    display: inline-block; /* Makes border-bottom only as wide as text */
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+.category-description {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin-top: -20px; /* Pulls it closer to the heading */
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+.menu-item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.menu-item-card {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.item-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-details h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    color: var(--color-primary-teal);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.item-details .price {
+    color: var(--color-accent-gold);
+    font-weight: 700;
+    font-size: 0.9em;
+    white-space: nowrap; /* Prevent price from wrapping */
+    margin-left: 10px; /* Space between title and price */
+}
+
+.item-details .description {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+.menu-note {
+    background-color: var(--color-gray);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+    color: #444;
+}
+
+.menu-note p {
+    margin-bottom: 10px;
+}
+
+/* For the "Menu Features" section layout */
+.menu-item-list-features {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 30px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column; /* Stack image and text on mobile */
+    background-color: var(--color-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.feature-image {
+    width: 100%;
+    height: 250px; /* Larger image for features */
+    object-fit: cover;
+}
+
+.feature-details {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.feature-details h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+}
+
+.feature-details p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Media Queries for Menu Page --- */
+@media (min-width: 768px) {
+    .menu-item-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width for larger screens */
+    }
+
+    .menu-item-list-features {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for features on desktop */
+    }
+
+    .feature-card {
+        flex-direction: column; /* Keep column on desktop too for consistent card look */
+    }
+}
