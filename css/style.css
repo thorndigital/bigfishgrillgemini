@@ -1759,3 +1759,83 @@ img {
         height: 220px; /* Adjust height for smaller screens if needed */
     }
 }
+/* --- New Two-Column Grid for Beverages (Wines & Cocktails) --- */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two columns, responsive */
+    gap: 40px; /* Space between the two columns */
+    margin-top: 40px;
+    align-items: start; /* Align items to the top if content heights differ */
+}
+
+/* Styling for the individual wine/cocktail categories within the grid */
+.grid-2-col .menu-category { /* More specific selector to ensure these styles apply here */
+    background-color: var(--color-light); /* White background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    height: 100%; /* Ensures both columns stretch to the same height */
+    display: flex; /* Use flexbox for internal content alignment */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.grid-2-col .menu-category h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    color: var(--color-primary-teal);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-accent-gold);
+    text-align: center;
+}
+
+.grid-2-col .menu-category h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
+    color: var(--color-dark);
+    margin-top: 25px; /* Space above sub-category title */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.grid-2-col .menu-category .menu-item-text {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    flex-shrink: 0;
+}
+
+.grid-2-col .menu-category .menu-item-text p {
+    color: #555;
+    margin: 0;
+    text-align: center;
+}
+
+.grid-2-col .menu-category .menu-item-text p span {
+    font-size: 0.9em;
+    color: #777;
+    display: block;
+}
+
+.grid-2-col .menu-category .note {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #777;
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .grid-2-col .menu-category {
+        padding: 25px;
+    }
+    .grid-2-col .menu-category h3 {
+        font-size: 1.6em;
+    }
+}
