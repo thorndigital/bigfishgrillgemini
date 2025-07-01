@@ -6,7 +6,7 @@
  * 1. Mobile Navigation (Slide-in menu with accordion sub-menus)
  * 2. Smooth Scrolling for anchor links
  * 3. Scroll-Reveal Animations for content sections
- * 4. Hero Background Cycler Initialization
+ * 4. Hero Background Cycler Initialization (now removed)
  * 5. Active Navigation Link Highlighting
  */
 
@@ -107,25 +107,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Initializes the hero background image cycler.
+     * This function is no longer called if you want a static background.
      */
-    function initHeroBackground() {
-        const heroContainer = document.getElementById('bg-container');
-        if (heroContainer) {
-            new BackgroundCycler(heroContainer, {
-                imageUrls: [
-                    '/images/background/bg1.jpg',
-                    '/images/background/bg2.jpg',
-                    '/images/background/bg3.jpg',
-                    '/images/background/bg5.jpg',
-                    '/images/background/bg6.jpg',
-                    '/images/background/bg7.jpg',
-                    '/images/background/bg8.jpg'
-                ],
-                fadeSpeed: 1500,
-                duration: 6000
-            });
-        }
-    }
+    // function initHeroBackground() {
+    //     const heroContainer = document.getElementById('bg-container');
+    //     if (heroContainer) {
+    //         new BackgroundCycler(heroContainer, {
+    //             imageUrls: [
+    //                 '/images/background/bg1.jpg',
+    //                 '/images/background/bg2.jpg',
+    //                 '/images/background/bg3.jpg',
+    //                 '/images/background/bg5.jpg',
+    //                 '/images/background/bg6.jpg',
+    //                 '/images/background/bg7.jpg',
+    //                 '/images/background/bg8.jpg'
+    //             ],
+    //             fadeSpeed: 1500,
+    //             duration: 6000
+    //         });
+    //     }
+    // }
 
     /**
      * Updates the navigation to highlight the link for the current page.
@@ -156,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
     initSmoothScroll();
     initScrollAnimations();
-    initHeroBackground();
+    // initHeroBackground(); // Commented out to remove the image cycler
     updateActiveNav();
 });
+
